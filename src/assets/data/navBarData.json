@@ -1,0 +1,17 @@
+ {
+  "NavBar":
+  [    
+  {
+    "name": "Home",
+    "href": "home.html"
+  },
+  {
+    "name":  "Project",
+    "href": "project.html"
+  },
+  {
+    "name": "Blog",
+    "href": "blog.html"
+  }
+]
+}

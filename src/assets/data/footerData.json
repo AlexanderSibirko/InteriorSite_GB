@@ -1,0 +1,30 @@
+{
+    "footerData": {
+        "about" : {
+            "text": "It is a long established fact that a reader will be distracted lookings.",
+            "socialLinks": [
+                {
+                    "svg": "img/facebook.svg",
+                    "href": "facebook.notexist.com"
+                },
+                {
+                    "svg": "img/twitter.svg",
+                    "href": "twitter.notexist.com"
+                },
+                {
+                    "svg": "img/LinkedLn.svg",
+                    "href": "LinkedLn.notexist.com"
+                },
+                {
+                    "svg": "img/instagram.svg",
+                    "href": "instagram.notexist.com"
+                }
+            ]
+        },
+        "contacts": {
+            "address": "55 East Birchwood Ave. Brooklyn, New York 11201",
+            "email": "contact@interno.com",
+            "phone": "(123) 456 - 7890"
+        }
+    }
+}

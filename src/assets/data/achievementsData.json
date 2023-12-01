@@ -1,0 +1,21 @@
+{
+    "achievements": 
+        [  
+            {
+                "value": 12,
+                "text": "Years Of Experiance"
+            },
+            {
+                "value": 85,
+                "text": "Success Project"
+            },
+            {
+                "value": 15,
+                "text": "Active Project"
+            },
+            {
+                "value": 95,
+                "text": "Happy Customer"
+            }
+        ]
+}

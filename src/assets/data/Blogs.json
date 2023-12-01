@@ -1,0 +1,67 @@
+{
+  "blogs": [
+    {
+      "id": 0,
+      "tagText": "Kitchen Design",
+      "imageSrc": "img/article1.png",
+      "headerText": "Let's Get Solution For Building Construction Work",
+      "dateText": "26 December,2022"
+    },
+    {
+      "id": 1,
+      "tagText": "Living Design",
+      "imageSrc": "img/article2.png",
+      "headerText": "Low Cost Latest Invented Interior Designing Ideas.",
+      "dateText": "22 December,2022"
+    },
+    {
+      "id": 2,
+      "tagText": "Interior Design",
+      "imageSrc": "/img/article3.png",
+      "headerText": "est For Any Office & Business Interior Solution",
+      "dateText": "25 December,2022"
+    },
+    {
+      "id": 3,
+      "tagText": "Kitchen Design",
+      "imageSrc": "/img/article4.png",
+      "headerText": "Lets Get Solution For Building Construction Work",
+      "dateText": "26 December,2022"
+    },
+    {
+      "id": 4,
+      "tagText": "Living Design",
+      "imageSrc": "/img/article5.png",
+      "headerText": "Low Cost Latest Invented Interior Designing Ideas.",
+      "dateText": "22 December,2022"
+    },
+    {
+      "id": 5,
+      "tagText": "Interior Design",
+      "imageSrc": "/img/article6.png",
+      "headerText": "est For Any Office & Business Interior Solution",
+      "dateText": "25 December,2022"
+    },
+    {
+      "id": 6,
+      "tagText": "Interior Design",
+      "imageSrc": "/img/articl7.png",
+      "headerText": "est For Any Office & Business Interior Solution",
+      "dateText": "25 December,2022"
+    },
+    {
+      "id": 7,
+      "tagText": "Interior Design",
+      "imageSrc": "/img/article8.png",
+      "headerText": "est For Any Office & Business Interior Solution",
+      "dateText": "25 December,2022"
+    },
+    {
+      "id": 8,
+      "tagText": "Interior Design",
+      "imageSrc": "/img/article9.png",
+      "headerText": "est For Any Office & Business Interior Solution",
+      "dateText": "25 December,2022"
+    }
+  ]
+  }

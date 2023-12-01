@@ -1,0 +1,82 @@
+{
+    "projects": [
+      {
+        "id": 0,
+        "projectName": "Modern Kitchan",
+        "tagsText": "Decor / Artchitecture",
+        "imagesSrc": ["img/project1.png"]
+      },
+      {
+        "id": 1,
+        "projectName": "Modern Kitchan",
+        "tagsText": "Decor / Artchitecture",
+        "imagesSrc": ["img/project2.png"]
+      },
+      {
+        "id": 2,
+        "projectName": "Modern Kitchan",
+        "tagsText": "Decor / Artchitecture",
+        "imagesSrc": ["img/project3.png"]
+      },
+      {
+        "id": 3,
+        "projectName": "Modern Kitchan",
+        "tagsText": "Decor / Artchitecture",
+        "imagesSrc": ["img/project4.png"]
+      },
+      {
+        "id": 4,
+        "projectName": "Modern Kitchan",
+        "tagsText": "Decor / Artchitecture",
+        "imagesSrc": ["img/project5.png"]
+      },
+      {
+        "id": 5,
+        "projectName": "Modern Kitchan",
+        "tagsText": "Decor / Artchitecture",
+        "imagesSrc": ["img/project6.png"]
+      },
+      {
+        "id": 6,
+        "projectName": "Modern Kitchan",
+        "tagsText": "Decor / Artchitecture",
+        "imagesSrc": ["img/project7.png"]
+      },
+      {
+        "id": 7,
+        "projectName": "Modern Kitchan",
+        "tagsText": "Decor / Artchitecture",
+        "imagesSrc": ["img/project8.png"]
+      },
+      {
+        "id": 8,
+        "projectName": "Modern Kitchan",
+        "tagsText": "Decor / Artchitecture",
+        "imagesSrc": ["img/project9.png"]
+      },
+      {
+        "id": 9,
+        "projectName": "Modern Kitchan",
+        "tagsText": "Decor / Artchitecture",
+        "imagesSrc": ["img/project10.png"]
+      },
+      {
+        "id": 10,
+        "projectName": "Modern Kitchan",
+        "tagsText": "Decor / Artchitecture",
+        "imagesSrc": ["img/project11.png"]
+      },
+      {
+        "id": 11,
+        "projectName": "Modern Kitchan",
+        "tagsText": "Decor / Artchitecture",
+        "imagesSrc": ["img/project12.png"]
+      },
+      {
+        "id": 12,
+        "projectName": "Modern Kitchan",
+        "tagsText": "Decor / Artchitecture",
+        "imagesSrc": ["img/project13.png"]
+      }
+    ]
+    }

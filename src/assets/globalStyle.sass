@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Jost:ital,wght@0,400;0,700;1,400&display=swap')
+
+$main_color: #292F36
+$contrast_text_color: white
+$attention_color: #CDA274
+$low_attention_color: #F4F0EC
+$ligth_border_color: #E7E7E7
+$contentWidth: 1200px
+$basicFontSize: 20
+$fontSize: 20
+$hFontFamily: 'DM Serif Display'
+$pFontFamily: 'Jost'
+
+*
+    margin: 0
+    padding: 0
+
+a
+    text-decoration: none
+
+html
+    font-size: ($fontSize)+px
+
+.center
+    padding-left: calc(50% - calc($contentWidth / 2))
+    padding-right: calc(50% - calc($contentWidth / 2))
+
+%displyText
+    font-family: $hFontFamily
+    font-style: normal
+    font-weight: 400
+    font-size: calc(85/$basicFontSize)+rem
+    line-height: 125%
+
+%h1Text
+    font-family: $hFontFamily
+    font-style: normal
+    font-weight: 400
+    font-size: calc(50/$basicFontSize)+rem
+    line-height: 125%
+
+%h2Text
+    font-family: $hFontFamily
+    font-style: normal
+    font-weight: 400
+    font-size: calc(35/$basicFontSize)+rem
+    line-height: 125%
+
+%h3Text
+    font-family: $hFontFamily
+    font-style: normal
+    font-weight: 400
+    font-size: calc(25/$basicFontSize)+rem
+    line-height: 125%
+
+%h4Text
+    font-family: $hFontFamily
+    font-style: normal
+    font-weight: 400
+    font-size: calc(22/$basicFontSize)+rem
+    line-height: 125%
+
+%h5Text
+    font-family: $hFontFamily
+    font-style: normal
+    font-weight: 400
+    font-size: calc(20/$basicFontSize)+rem
+    line-height: 125%
+
+%h6Text
+    font-family: $hFontFamily
+    font-style: normal
+    font-weight: 400
+    font-size: calc(18/$basicFontSize)+rem
+    line-height: 125%
+
+%pLargeText
+    font-family: $pFontFamily
+    font-style: normal
+    font-weight: 400
+    font-size: calc(22/$basicFontSize)+rem
+    line-height: 150%
+
+%pMediumText
+    font-family: $pFontFamily
+    font-style: normal
+    font-weight: 400
+    font-size: calc(20/$basicFontSize)+rem
+    line-height: 150%
+
+%pSmallText
+    font-family: $pFontFamily
+    font-style: normal
+    font-weight: 400
+    font-size: calc(18/$basicFontSize)+rem
+    line-height: 150%
+
+%pTinyText
+    font-family: $pFontFamily
+    font-style: normal
+    font-weight: 400
+    font-size: calc(16/$basicFontSize)+rem
+    line-height: 150%
+
+%defaultButton
+    @extend %pSmallText
+    font-weight: 600
+    background-color: $main_color
+    padding: 26px 48px
+    color: white
+    border: none
+    border-radius: 20px
+    display: flex
+    align-items: center
