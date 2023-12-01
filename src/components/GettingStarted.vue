@@ -1,7 +1,7 @@
 <template>
     <div class="GettingStarted center">
     <img
-       src="@\assets\img\banner\GettingStartedPic.jpg"
+       src="\img\GettingStartedPic.jpg"
        alt="GettingStarted-picture"
        class="GettingStarted-image"
     />

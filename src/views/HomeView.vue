@@ -39,10 +39,6 @@ import InteriorFooter from '@/components/Footer.vue'
 import Blog from '@/components/Blog.vue'
 import Project from '@/components/Project.vue'
 
-import blogsData from '@/assets/data/Blogs.json'
-import projectsData from '@/assets/data/Projects.json'
-
-
 export default {
   name: 'HomeView',
   components: {
@@ -54,10 +50,12 @@ export default {
   },
   data() {
         return {
-          blogs: blogsData.blogs.slice(-3),
-          projects: projectsData.projects.slice(0,4)
         };
     },
+    computed: {
+      blogs() { return this.$store.getters.getAllBlogs.slice(-3) },
+      projects() { return this.$store.getters.getAllProjects.slice(0,4) }
+    }
  }
 </script>
 

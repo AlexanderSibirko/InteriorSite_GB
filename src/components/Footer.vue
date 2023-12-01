@@ -9,7 +9,7 @@
             </div>
             <h3  class="footer-about-text">{{ footerData.about.text }}</h3>
             <div class="social-links">
-                <a class="social-link" :href= "socialLink.href" v-for="socialLink in footerData.about.socialLinks" :key="socialLink.id">
+                <a class="social-link" :href= "'https://www.'+socialLink.href" v-for="socialLink in footerData.about.socialLinks" :key="socialLink.id">
                     <img :src="socialLink.svg" alt="social link icon">
                 </a> 
             </div>
@@ -75,6 +75,10 @@ export default {
       @extend %pLargeText
       margin-bottom: 26px
 
-    .social-links
-        gap: 20px
+    .social-link
+        padding-left: 15px
+
+    .header-logo-text
+      @extend %h2Text
+      padding-left: 10px
 </style>

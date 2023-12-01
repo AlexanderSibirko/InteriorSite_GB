@@ -4,19 +4,19 @@
             "text": "It is a long established fact that a reader will be distracted lookings.",
             "socialLinks": [
                 {
-                    "svg": "img/facebook.svg",
+                    "svg": "../img/facebook.svg",
                     "href": "facebook.notexist.com"
                 },
                 {
-                    "svg": "img/twitter.svg",
+                    "svg": "../img/twitter.svg",
                     "href": "twitter.notexist.com"
                 },
                 {
-                    "svg": "img/LinkedLn.svg",
+                    "svg": "../img/LinkedLn.svg",
                     "href": "LinkedLn.notexist.com"
                 },
                 {
-                    "svg": "img/instagram.svg",
+                    "svg": "../img/instagram.svg",
                     "href": "instagram.notexist.com"
                 }
             ]

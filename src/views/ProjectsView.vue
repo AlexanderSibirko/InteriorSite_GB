@@ -28,10 +28,11 @@ export default {
   data() {
         return {
           headerData: {
-            pageName: 'Out Project',
+            pageName: 'Our Project',
             breadCrumbs: [{text: 'Home', route: '/'},
                          {text: 'Project', route: '/projects'}],
-            imageSrc: 'img/ProjectHeadPic.png'
+            imageSrc: 'img/ProjectHeadPic.png',
+            showText: true
           }
         };
     },

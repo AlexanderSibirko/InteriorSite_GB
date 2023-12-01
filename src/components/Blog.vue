@@ -17,7 +17,9 @@
             <p class="blogs-item-date-text">
               {{ blog.dateText }}
             </p>
-            <button class="blogs-item-router-button">></button>
+            <router-link :to="'/blogDetails/'+blog.id">
+                <button class="blogs-item-router-button">></button>
+           </router-link>
           </div>
         </div>
 </template>
@@ -47,6 +49,8 @@ export default {
     width: 52px
     height: 52px
 
+  .blogs-item-router-button:hover
+    background-color: $attention_color
   .blogs-item
     border-radius: 62px
     border: solid 1px $ligth_border_color
@@ -58,11 +62,15 @@ export default {
     background-color: $low_attention_color
     button
       background-color: white
+    button:hover
+      background-color: $attention_color
 
   .blog-item-image-wrapper
     position: relative
     margin-bottom: 20px
 
+  img
+    max-width: 340px
   .blogs-item-image
     border-radius: 45px 45px 0px 0px
     z-index: -5
@@ -83,6 +91,7 @@ export default {
     display: flex
     justify-content: space-between
     margin-top: 30px
+    align-items: baseline
 
   .blogs-item-date-text
     @extend %pLargeText

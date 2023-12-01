@@ -2,6 +2,35 @@
   <div class="content">
     <InteriorHeader :headerData="headerData"/>
       
+    <div class="latest-post center">
+      <div class="latest-post-head">
+        <h1 class="latest-post-main-header">Latest Post </h1>
+      </div>
+
+      <div class="latest-post-article">
+        <img
+          :src="blogs[latestBlog].imageSrc"
+          alt="Latest Post Picture"
+          class="latest-post-image"
+        />
+        <div class="latest-post-content">
+          <div class="latest-post-content-texts">
+            <h1 class="latest-post-header-text">
+              {{ blogs[latestBlog].headerText }}
+            </h1>
+            <div v-html="blogs[latestBlog].shortDesc"></div>
+          </div>
+          <div class="blogs-presentation-grid-item-content">
+            <p class="blogs-presentation-grid-item-date-text">
+              {{ blogs[latestBlog].dateText }}
+            </p>
+            <router-link :to="'/blogDetails/'+blogs[latestBlog].id">
+              <button class="blogs-presentation-grid-item-button">></button>
+            </router-link>
+          </div>
+        </div>
+      </div>
+    </div>
 
       <div class="blogs center">
       <h1 class="blogs-description-header">Artice & News</h1>
@@ -10,7 +39,7 @@
       </div>
       <div class="blogs-paging"> 
       <vue-awesome-paginate 
-      :total-items="9"
+      :total-items="blogs.length"
       :items-per-page="6"
       :max-pages-shown="3"
       v-model="currentPage"
@@ -18,11 +47,7 @@
       />
       </div> 
       </div>
-
-
     <InteriorFooter />
-
-
   </div>
 </template>
 
@@ -45,13 +70,15 @@ export default {
             pageName: 'Articles & News',
             breadCrumbs: [{text: 'Home', route: '/'},
                          {text: 'Blog', route: '/blogs'}],
-            imageSrc: 'img/ArticleAndNewsHeadPic.jpg'
+            imageSrc: 'img/ArticleAndNewsHeadPic.jpg',
+            showText: true
           },
-          blogs : BlogsData.blogs
+          blogs: BlogsData.blogs
         };
     },
   
   computed: {
+    latestBlog: () => {return BlogsData.blogs.length -1}
     // blogsShow (pageSize, currentPage) {
     //   return this.blogs.slice((currentPage-1)*pageSize, currentPage*pageSize)
     // }
@@ -132,4 +159,59 @@ setup() {
         display: flex
         justify-content: center
 
+  .latest-post
+    margin-top: 200px
+
+  .latest-post-main-header
+        @extend %h1Text
+
+  .latest-post-image
+        border-radius: 50px
+        height: fit-content
+
+  .latest-post-article
+        margin-top: 28px
+        padding: 22px
+        display: grid
+        grid-template-columns: repeat(2,1fr)
+        gap: 65px
+        border: solid 1px $ligth_border_color
+        border-radius: 62px
+
+  .latest-post-content
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        padding-right: 32px
+        margin-top: 50px
+        margin-bottom: 50px
+
+  .latest-post-header-text
+        @extend %h3Text
+        margin-bottom: 22px
+
+  .latest-post-description-text
+        @extend %pLargeText
+        margin-bottom: 22px
+    
+  .blogs-presentation-grid-item-content
+        display: flex
+        justify-content: space-between
+        margin-top: 30px
+        align-items: baseline
+
+  .blogs.presentation-grid-item-date-text
+        @extend %pLargeText
+
+
+  .blogs-presentation-grid-item-button
+    @extend %pLargeText
+    background-color: $low_attention_color
+    border: none
+    border-radius: 50%
+    width: 52px
+    height: 52px
+  
+  .blogs-presentation-grid-item-button:hover
+    background-color: $attention_color
 </style>

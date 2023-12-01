@@ -14,15 +14,31 @@
 </template>
 
 <script>
-import InteriorNavBar from './components/NavBar.vue'
-
+import { mapState, mapMutations, mapGetters, mapActions } from 'vuex';
+import InteriorNavBar from './components/NavBar.vue';
+// import BlogsData from '../assets/data/Blogs.json'
 
 export default {
   name: 'InteriorApp',
   components: {
     InteriorNavBar
   },
+  methods: {
+    ...mapMutations(['SET_BLOGS_DATA','SET_PROJECTS_DATA','SET_ACHIEVEMENTS_DATA','LOAD_CONTACTS_DATA'])
+  },
+  computed: {
+    ...mapState(['blogs','projects','contactsInfo','achievements']),
+    ...mapGetters(['getAllAchievements','getAllBlogs','getBlogsSlice']),
+    ...mapActions(['loadBlogs','loadProjects','loadAchievements','loadContactInfo'])
+  },
+  created() {
+    this.SET_BLOGS_DATA(this.loadBlogs)
+    this.SET_PROJECTS_DATA(this.loadProjects)
+    this.SET_ACHIEVEMENTS_DATA(this.loadAchievements)
+    this.LOAD_CONTACTS_DATA(this.loadContactInfo)
+  }
 }
+
 
 </script>
 

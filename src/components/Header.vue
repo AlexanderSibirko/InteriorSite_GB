@@ -5,7 +5,7 @@
         alt="Header image"
         class="page-head__image"
       />
-      <div class="page-head__content">
+      <div v-if="headerData.showText" class="page-head__content">
         <h1 class="page-head__header-text">{{ headerData.pageName }}</h1>
         <div class="page-head__breadcrumbs">
             <router-link v-for="link in headerData.breadCrumbs" :key="link.text"
