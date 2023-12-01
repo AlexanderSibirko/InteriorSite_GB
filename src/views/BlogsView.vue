@@ -14,6 +14,7 @@
       :items-per-page="6"
       :max-pages-shown="3"
       v-model="currentPage"
+      :hide-prev-next-when-ends="true"
       />
       </div> 
       </div>
