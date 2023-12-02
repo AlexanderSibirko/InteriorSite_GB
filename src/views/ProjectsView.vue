@@ -20,8 +20,6 @@
 import InteriorHeader from '@/components/Header.vue'
 import InteriorFooter from '@/components/Footer.vue'
 
-// import Paginator from '@/components/Paginator.vue'
-// import { ref } from "vue";
 
 export default {
   name: 'ProjectsView',
@@ -39,9 +37,7 @@ export default {
   components: {
     InteriorHeader,
     InteriorFooter,
-
-    // Paginator
-},
+  },
 // currentPage: 0,
 // setup() {
 //     const currentPage = ref(1);

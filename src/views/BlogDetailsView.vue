@@ -2,10 +2,12 @@
     <InteriorHeader :headerData="headerData"/>
       <div id="vue-blogs" class="blogs-detailed center">
         <div id="blog-articles" class="blogs-detailed__articles">
-          <div v-if="blogs[this.$route.params.id]">
-            <div v-html="blogs[this.$route.params.id].articleHtml" :blog-tags="blogs[this.$route.params.id].blogTags"></div>
+          <div class="blog-wrapper" v-if="blogs[this.$route.params.id]">
+            <div  v-if="checkTags(blogs[this.$route.params.id].blogTags)" v-html="blogs[this.$route.params.id].articleHtml" :blog-tags="blogs[this.$route.params.id].blogTags"></div>
             <h1 class="h1text"> Similar Blogs</h1>
-            <div v-for="blog in blogs" :key="blog.id" v-html="blog.articleHtml" :blog-tags="blog.blogTags">
+            
+            <div class="blog-wrapper" v-for="blog in blogs" :key="blog.id">
+              <div  v-if="checkSimilarBlogs(blog.blogTags, blog.id)" v-html="blog.articleHtml" :blog-tags="blog.blogTags"></div>
             </div>
           </div>
         </div>
@@ -16,7 +18,7 @@
             <InteriorTagButton v-for="tag in tags"
             :key="tag.tagName"
             :tag-name="tag.tagName"
-            :check-status="tag.checked" />
+            :check-status="tag.checked" @click="changeActiveTag(tag.tagName)"/>
           </div>
         </div>
       </div>
@@ -49,7 +51,7 @@
             tags: [
             {
               tagName: "Kitchen",
-              checked: true,
+              checked: false,
             },
             {
               tagName: "Bedroom",
@@ -74,12 +76,37 @@
     methods: {
         checkBlogId() {
             return (BlogsData.blogs[this.$route.params.id]) ? true : false
+        },
+
+        changeActiveTag (tagName) {
+          this.currentTag = tagName;
+          this.tags.forEach(tag => {
+            (tag.tagName === this.currentTag) ? tag.checked = true : tag.checked = false;
+          });
+        },
+
+        checkTags (blogTags) {
+          return (blogTags.includes(this.currentTag)) ? true : false
+        },
+
+        checkSimilarBlogs(blogTags, blogId) {
+          if (this.checkTags(blogTags) && blogId != this.$route.params.id) {
+            return true
+          } else {
+            return false
+          }
         }
-        },
-        created() {
-                (this.checkBlogId()) ? console.log("all fine") :
-                this.$router.push({ name : "PageNotFoundView"})
-        },
+    },
+    created() {
+        if (this.checkBlogId()) { 
+          console.log("all fine")
+          this.currentTag = BlogsData.blogs[this.$route.params.id].blogTags[0]
+          this.changeActiveTag(this.currentTag)
+        } 
+        else {
+          this.$router.push({ name : "PageNotFoundView"})
+        }
+    },
     
     components: {
       InteriorHeader,
@@ -96,6 +123,12 @@
       display: grid
       gap: 52px
       grid-template-columns: 2fr 1fr
+      
+      .blogs-detailed__article
+        margin: 16px
+
+      .blog-wrapper
+        border: solid 1px $ligth_border_color
 
       .blogs-detailed__tags-header
         @extend %h3Text

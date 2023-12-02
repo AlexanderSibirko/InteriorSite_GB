@@ -1,27 +1,29 @@
 <template>
-    <div class="blogs-item">
-          <div class="blog-item-image-wrapper">
-            <img
-              :src="blog.imageSrc"
-              alt="blog pic"
-              class="blogs-item-image"
-            />
-            <p class="blogs-item-tag-overimage">
-              {{ blog.tagText }}
-            </p>
-          </div>
-          <h3 class="blogs-item-header-text">
-              {{ blog.headerText }}
-          </h3>
-          <div class="blogs-item-content">
-            <p class="blogs-item-date-text">
-              {{ blog.dateText }}
-            </p>
-            <router-link :to="'/blogDetails/'+blog.id">
-                <button class="blogs-item-router-button">></button>
-           </router-link>
-          </div>
-        </div>
+  
+  <div class="blogs-item">
+    <router-link :to="'/blogDetails/'+blog.id">
+      <div class="blog-item-image-wrapper">
+        <img
+          :src="blog.imageSrc"
+          alt="blog pic"
+          class="blogs-item-image"
+        />
+        <p class="blogs-item-tag-overimage">
+          {{ blog.tagText }}
+        </p>
+      </div>
+      <h3 class="blogs-item-header-text">
+        {{ blog.headerText }}
+      </h3>
+      <div class="blogs-item-content">
+        <p class="blogs-item-date-text">
+          {{ blog.dateText }}
+        </p>
+        <button class="blogs-item-router-button">></button>
+      </div>
+    </router-link>
+  </div>
+      
 </template>
 
 <script>
@@ -95,5 +97,8 @@ export default {
 
   .blogs-item-date-text
     @extend %pLargeText
-
+  
+  a
+    text-decoration: none
+    color: black
 </style>
